@@ -2,7 +2,7 @@
 ; https://www.autohotkey.com/board/topic/118350-how-to-enable-auto-hotkey-in-certain-program-only/
 
 SetTitleMatchMode, 2
-#IfWinActive, Microsoft Teams
+#IfWinActive, ahk_exe Teams.exe
 ^w::
-	Send !{F4}
+	WinClose
 	return

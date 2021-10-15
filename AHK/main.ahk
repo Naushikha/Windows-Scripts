@@ -9,3 +9,6 @@
 
 ; Fix for Ctrl+Backspace in File Explorer, Notepad etc.
 #Include Scripts\fixCtrlBackspace.ahk
+
+; Open terminal easily like in Linux using Ctrl+Alt+T
+#Include Scripts\openTerminalShortcut.ahk

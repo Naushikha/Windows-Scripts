@@ -5,7 +5,8 @@
 	^Backspace::
 #IfWinActive ahk_class Notepad
 	^Backspace::
-	Send ^+{Left}{Backspace}
+		Send ^+{Left}{Backspace}
+		Return
 #IfWinActive
 
 ; source and context: http://superuser.com/a/636973/124606

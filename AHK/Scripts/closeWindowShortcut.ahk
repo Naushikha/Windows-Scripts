@@ -3,5 +3,6 @@
 
 SetTitleMatchMode, 2
 #IfWinActive, Microsoft Teams
-^w::Send !{F4}
-return
+^w::
+	Send !{F4}
+	return

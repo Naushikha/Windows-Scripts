@@ -15,3 +15,6 @@
 
 ; Switch desktops easily like in Linux using Ctrl + Alt + > / <
 #Include Scripts\switchDesktops.ahk
+
+; Use PC power control shortcuts
+#Include Scripts\powerShortcuts.ahk

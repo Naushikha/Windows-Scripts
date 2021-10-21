@@ -18,3 +18,6 @@
 
 ; Use PC power control shortcuts
 #Include Scripts\powerShortcuts.ahk
+
+; Use screenshot shortcuts
+#Include Scripts\screenshotShortcuts.ahk

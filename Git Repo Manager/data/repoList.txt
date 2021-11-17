@@ -1,0 +1,32 @@
+SAF-TAC Core,SAFTAC
+Advanced Sessions,Plugins\AdvancedSessions
+Easy Ballistics,Plugins\EasyBallistics
+Easy Flight Model,Plugins\EasyFlightModel
+F18 Hornet Sound System,Plugins\F18HornetSoundSystem
+ForceTube VR For UE4,Plugins\ForceTubeVRForUE4
+Guided Projectile,Plugins\GuidedProjectile
+Mod Editor,Plugins\ModEditor
+Octagon Voice Chat,Plugins\OctagonVoiceChat
+OWI Enhanced Vehicle Movement,Plugins\OWIEnhancedVehicleMovement
+POD View,Plugins\PODView
+PowerIK,Plugins\PowerIK
+SAF GI Unreal Plugin,Plugins\SAFGIUnrealPlugin
+Scenario Editor,Plugins\ScenarioEditor
+Sim AdvancedVehicle,Plugins\SimAdvancedVehicle
+Sim CommunicationProtocolManager,Plugins\SimCommunicationProtocolManager
+Sim Content,Plugins\SimContent 
+Sim Draw,Plugins\SimDraw
+Sim Geographic,Plugins\SimGeographic
+Sim IK,Plugins\SimIK
+Sim Integration,Plugins\SimIntegration
+Sim Types,Plugins\SimTypes
+Sim UI,Plugins\SimUI
+Sim Vehicle,Plugins\SimVehicle
+Sim Weather,Plugins\SimWeather
+Unreal SimLib,Plugins\UnrealSimLib
+VR Expansion Plugin,Plugins\VRExpansionPlugin
+VR IK Body,Plugins\VRIKBody
+XShip,Plugins\XShip
+Vehicle AI Plugin,Plugins\VehicleAIPlugin
+BE Integration Plugin,Plugins\BEIntegrationPlugin
+Varjo OpenXR,Plugins\VarjoOpenXR

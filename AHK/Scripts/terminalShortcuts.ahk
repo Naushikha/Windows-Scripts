@@ -19,6 +19,9 @@
 
 #If
 
+; Remaps the Windows run to Linux Mint application running shortcut Alt + F2 > Win + R
+!F2::SendInput #r
+
 
 ; IN CASE YOU FORGOT: Shift + Right Click on any folder can bring up an option to open a command prompt/powershell there.
 

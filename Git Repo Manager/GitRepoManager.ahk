@@ -59,7 +59,7 @@ Gui, Submit
 			RepoNameList .=repoList[index][1] . ", "
 		}
 	}
-	MsgBox, 52,, EXECUTING COMMAND `n`n '%Command%' `n`n ON `n`n %RepoNameList% `n`n CONTINUE ?
+	MsgBox, 52,, EXECUTING COMMAND`, `n`n%Command%` `n`nON SELECTED REPOS`, `n`n%RepoNameList% `n`nCONTINUE ?
 	IfMsgBox Yes
 	{
 		RepoLocationList := ""

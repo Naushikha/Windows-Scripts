@@ -21,8 +21,10 @@ done
 
 if [ $REQUIRE_LOGIN -eq 1 ]
 then
-	echo "(!) SSH Login Required to Execute Command"
-	echo "Starting SSH agent..."
+	echo 
+	echo --------------------------------------------------
+	echo "(!) SSH login required to execute command"
+	echo "(*) Starting SSH agent..."
 	eval $(ssh-agent)
 	ssh-add
 fi
@@ -40,6 +42,6 @@ done
 
 echo 
 echo ==================================================
-echo All done!
+echo "(!) All done!"
 echo
-read -n 1 -s -r -p "Press any key to exit..."
+read -n 1 -s -r -p "> Press any key to exit..."

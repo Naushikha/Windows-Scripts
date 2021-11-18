@@ -35,7 +35,7 @@ do
 	echo --------------------------------------------------
 	cd $PROJECT_DIR
 	cd $REPO
-	$GIT_COMMAND
+	eval ${GIT_COMMAND}
 done
 
 echo 

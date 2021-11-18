@@ -26,7 +26,9 @@ toggleStatus := 1
 
 Gui, Add, Button, default xm gToggleSelection, Toggle Selection
 Gui, Add, Text,, Command:
+Gui, Font, bold s11, Arial
 Gui, Add, ComboBox, w600 Choose1 vCommand gCbAutoComplete, %savedCommands%
+Gui, Font,
 Gui, Add, Text, ym, `nProject Location: `n`n%projectDirectory%`n
 Gui, Add, Button, default gRunCommand, `nRun Command`non`nSelected Repositories`n`n
 Gui, Add, Checkbox, y+95 vNeedLogin, Require SSH login

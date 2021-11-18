@@ -23,7 +23,7 @@ if [ $REQUIRE_LOGIN -eq 1 ]
 then
 	echo 
 	echo --------------------------------------------------
-	echo "(!) SSH login required to execute command"
+	echo "(!) SSH login required to execute command '$GIT_COMMAND'"
 	echo "(*) Starting SSH agent..."
 	eval $(ssh-agent)
 	ssh-add

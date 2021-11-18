@@ -70,7 +70,6 @@ Gui, Submit
 				RepoLocationList.=repoList[index][2] . " "
 			}
 		}
-		;Run, "%A_WorkingDir%\data\runGitCmd.bat" "%projectDirectory%" "%Command%" "%RepoLocationList%"
 		Run, "C:\Program Files\Git\git-bash.exe" "data\gitBashMagic.sh" "%projectDirectory%" "%Command%" "%RepoLocationList%" "%NeedLogin%"
 	}
 	Gui, Show

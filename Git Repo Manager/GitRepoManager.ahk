@@ -23,6 +23,7 @@ Gui, Add, Text,, Command:
 Gui, Add, Edit, w600 vCommand, git status
 Gui, Add, Text, ym, `nProject Location: `n`n%projectDirectory%`n
 Gui, Add, Button, default gRunCommand, `nRun Command`non`nSelected Repositories`n`n
+Gui, Add, Checkbox, y+95 vNeedLogin, Require SSH login
 
 Gui, Show,, Git Repository Manager
 Return
@@ -61,7 +62,8 @@ Gui, Submit
 				RepoLocationList.=repoList[index][2] . " "
 			}
 		}
-		Run, "%A_WorkingDir%\data\runGit.bat" "%projectDirectory%" "%Command%" "%RepoLocationList%"
+		;Run, "%A_WorkingDir%\data\runGitCmd.bat" "%projectDirectory%" "%Command%" "%RepoLocationList%"
+		Run, "C:\Program Files\Git\git-bash.exe" "data\gitBashMagic.sh" "%projectDirectory%" "%Command%" "%RepoLocationList%" "%NeedLogin%"
 	}
 	Gui, Show
 Return

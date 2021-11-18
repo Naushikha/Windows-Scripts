@@ -1,11 +1,17 @@
 repoList := Object()
 selectedList := Array()
+savedCommands := ""
 
 FileRead, projectDirectory, %A_WorkingDir%\data\projectDirectory.txt
 
 Loop, Read, %A_WorkingDir%\data\repoList.txt
 {
 	repoList[A_Index] := StrSplit(A_LoopReadLine,",")
+}
+
+Loop, Read, %A_WorkingDir%\data\savedCommands.txt
+{
+	savedCommands .= A_LoopReadLine "|"
 }
 
 Gui, Add, ListView, AltSubmit Checked r10 w600 NoSort gListViewChecks, [=]|Repository|Location
@@ -20,7 +26,7 @@ toggleStatus := 1
 
 Gui, Add, Button, default xm gToggleSelection, Toggle Selection
 Gui, Add, Text,, Command:
-Gui, Add, Edit, w600 vCommand, git status
+Gui, Add, ComboBox, w600 Choose1 vCommand gCbAutoComplete, %savedCommands%
 Gui, Add, Text, ym, `nProject Location: `n`n%projectDirectory%`n
 Gui, Add, Button, default gRunCommand, `nRun Command`non`nSelected Repositories`n`n
 Gui, Add, Checkbox, y+95 vNeedLogin, Require SSH login
@@ -84,3 +90,42 @@ ToggleSelection:
 		selectedList[index] := toggleStatus
 	}
 Return
+
+/*
+	https://www.autohotkey.com/boards/viewtopic.php?f=76&t=78304
+	=======================================================================================
+	 Function:			CbAutoComplete
+	 Description:		Auto-completes typed values in a ComboBox.
+
+	 Author:			Pulover [Rodolfo U. Batista]
+	 Usage:
+		Gui, Add, ComboBox, w200 h50 gCbAutoComplete, Billy|Joel|Samual|Jim|Max|Jackson|George
+	=======================================================================================
+*/
+CbAutoComplete() {
+	; CB_GETEDITSEL = 0x0140, CB_SETEDITSEL = 0x0142
+	If ((GetKeyState("Delete", "P")) || (GetKeyState("Backspace", "P")))
+		Return
+	GuiControlGet, lHwnd, Hwnd, %A_GuiControl%
+	SendMessage, 0x0140, 0, 0,, ahk_id %lHwnd%
+	MakeShort(ErrorLevel, Start, End)
+	GuiControlGet, CurContent,, %lHwnd%
+	GuiControl, ChooseString, %A_GuiControl%, %CurContent%
+	If (ErrorLevel) {
+		ControlSetText,, %CurContent%, ahk_id %lHwnd%
+		PostMessage, 0x0142, 0, MakeLong(Start, End),, ahk_id %lHwnd%
+		Return
+	}
+	GuiControlGet, CurContent,, %lHwnd%
+	PostMessage, 0x0142, 0, MakeLong(Start, StrLen(CurContent)),, ahk_id %lHwnd%
+}
+
+; Required for: CbAutoComplete()
+MakeLong(LoWord, HiWord) {
+	Return, (HiWord << 16) | (LoWord & 0xffff)
+}
+
+; Required for: CbAutoComplete()
+MakeShort(Long, ByRef LoWord, ByRef HiWord) {
+	LoWord := Long & 0xffff, HiWord := Long >> 16
+}

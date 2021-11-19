@@ -30,8 +30,9 @@ Gui, Font, bold s11, Arial
 Gui, Add, ComboBox, w600 Choose1 vCommand gCbAutoComplete, %savedCommands%
 Gui, Font,
 Gui, Add, Text, ym, `nProject Location: `n`n%projectDirectory%`n
-Gui, Add, Button, default gRunCommand, `nRun Command`non`nSelected Repositories`n`n
-Gui, Add, Checkbox, y+95 vNeedLogin, Require SSH login
+Gui, Add, Button, default gRunCommand, `n` ` ` Run Command` ` ` `n`n
+Gui, Add, Checkbox, Checked vSoundEnabled, Enable SFX
+Gui, Add, Checkbox, y+105 vNeedLogin, Require SSH login
 
 Gui, Show,, Git Repository Manager
 Return
@@ -82,7 +83,7 @@ Gui, Submit
 				RepoLocationList.=repoList[index][2] . " "
 			}
 		}
-		Run, "C:\Program Files\Git\git-bash.exe" "data\gitBashMagic.sh" "%projectDirectory%" "%Command%" "%RepoLocationList%" "%NeedLogin%"
+		Run, "C:\Program Files\Git\git-bash.exe" "data\gitBashMagic.sh" "%projectDirectory%" "%Command%" "%RepoLocationList%" "%NeedLogin%" "%SoundEnabled%"
 	}
 	Gui, Show
 Return

@@ -3,8 +3,14 @@ GIT_COMMAND=$2
 REPO_LIST=$3
 REQUIRE_LOGIN=$4
 
-echo -e "\t*** Git Repository Manager ***"
-echo ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+# Variables for colors
+CYAN=$(tput setaf 6)
+YELLOW=$(tput setaf 3)
+GREEN=$(tput setaf 2)
+NC=$(tput sgr0)
+
+echo -e "${CYAN}\t*** Git Repository Manager ***"
+echo "~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~${NC}"
 echo 
 echo -e -n "> Working Project Directory: \n\t"
 echo $PROJECT_DIR
@@ -23,7 +29,7 @@ if [ $REQUIRE_LOGIN -eq 1 ]
 then
 	echo 
 	echo --------------------------------------------------
-	echo "(!) SSH login required to execute command '$GIT_COMMAND'"
+	echo "${YELLOW}(!) SSH login required to execute command '$GIT_COMMAND'${NC}"
 	echo "(*) Starting SSH agent..."
 	eval $(ssh-agent)
 	ssh-add
@@ -33,7 +39,7 @@ for REPO in $REPO_LIST
 do
 	echo 
 	echo --------------------------------------------------
-    echo ">>> $REPO"
+    echo "${GREEN}>>> $REPO${NC}"
 	echo --------------------------------------------------
 	cd $PROJECT_DIR
 	cd $REPO
@@ -42,6 +48,6 @@ done
 
 echo 
 echo ==================================================
-echo "(!) All done!"
+echo "${YELLOW}(!) All done!${NC}"
 echo
 read -n 1 -s -r -p "> Press any key to exit..."

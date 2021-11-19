@@ -3,6 +3,9 @@ GIT_COMMAND=$2
 REPO_LIST=$3
 REQUIRE_LOGIN=$4
 
+# Set Bash window title - https://stackoverflow.com/a/46459553
+echo -e "\033]0;Git Repo Manager: Bash Instance\007"
+
 # Variables for colors
 CYAN=$(tput setaf 6)
 YELLOW=$(tput setaf 3)

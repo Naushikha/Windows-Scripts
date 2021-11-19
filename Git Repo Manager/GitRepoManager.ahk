@@ -47,6 +47,18 @@ ListViewChecks:
 	Else If (ErrorLevel == "c"){
 		selectedList[A_EventInfo] := 0
 	}
+	If (A_GuiEvent = "DoubleClick") ; Feature to double click on a repo to git bash to it
+	{
+		If (A_EventInfo == 1) ; First repo is the main repo, handle it differently
+		{
+			Run, "C:\Program Files\Git\git-bash.exe" "--cd=%projectDirectory%"
+		}
+		Else
+		{
+			selectedRepo := repoList[A_EventInfo][2]
+			Run, "C:\Program Files\Git\git-bash.exe" "--cd=%projectDirectory%\%selectedRepo%"
+		}
+	}
 Return
 
 RunCommand:

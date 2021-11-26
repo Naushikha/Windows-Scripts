@@ -1,4 +1,4 @@
-SAF-TAC Core,SAFTAC
+SAF-TAC Core,.
 Advanced Sessions,Plugins\AdvancedSessions
 Easy Ballistics,Plugins\EasyBallistics
 Easy Flight Model,Plugins\EasyFlightModel
@@ -12,8 +12,8 @@ POD View,Plugins\PODView
 PowerIK,Plugins\PowerIK
 SAF GI Unreal Plugin,Plugins\SAFGIUnrealPlugin
 Scenario Editor,Plugins\ScenarioEditor
-Sim AdvancedVehicle,Plugins\SimAdvancedVehicle
-Sim CommunicationProtocolManager,Plugins\SimCommunicationProtocolManager
+Sim Advanced Vehicle,Plugins\SimAdvancedVehicle
+Sim Communication Protocol Manager,Plugins\SimCommunicationProtocolManager
 Sim Content,Plugins\SimContent 
 Sim Draw,Plugins\SimDraw
 Sim Geographic,Plugins\SimGeographic

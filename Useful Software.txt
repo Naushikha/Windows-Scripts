@@ -1,7 +1,14 @@
 ClickMonitorDDC - Control monitors using DDC - https://m.majorgeeks.com/files/details/clickmonitorddc.html
 XMeters - Show system stats on taskbar - https://entropy6.com/xmeters/
 TaskBar Stats - Open source alternative for XMeters - https://github.com/openhoangnc/taskbar-stats
+TrafficMonitor - 
+https://github.com/zhongyang219/TrafficMonitor (There's an English readme)
+https://github.com/zhongyang219/TrafficMonitor/blob/master/README_en-us.md
 BitMeter OS - Log network usage - https://codebox.net/pages/bitmeteros
 
 AutoHotKey - Script and automate Windows - https://www.autohotkey.com/
 MoveMouse - https://www.microsoft.com/en-us/p/move-mouse/9nq4ql59xlbf
+
+Interesting stuff to keep track of,
+https://github.com/microsoft/PowerToys/issues/3583
+https://github.com/microsoft/PowerToys/issues/5499

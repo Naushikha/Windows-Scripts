@@ -31,3 +31,4 @@ Vehicle AI Plugin,Plugins\VehicleAIPlugin
 BE Integration Plugin,Plugins\BEIntegrationPlugin
 Varjo OpenXR,Plugins\VarjoOpenXR
 Munitions,Plugins\Munitions
+DecaMove SDK,Plugins\DecaMoveSDK

@@ -2,6 +2,7 @@ git status
 git diff
 git pull
 git branch
+git fetch origin remotebranch:localbranch
 git checkout somebranch
 git checkout -b newbranch
 git pull . develop

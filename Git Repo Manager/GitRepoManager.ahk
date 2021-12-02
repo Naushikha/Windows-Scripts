@@ -60,6 +60,7 @@ ListViewChecks:
 	}
 	If (A_GuiEvent = "DoubleClick") ; Feature to double click on a repo to git bash to it
 	{
+		Process, Close, conhost.exe ; Remove any residual conhosts lying around in the RAM (~6MB!)
 		If (A_EventInfo == 1) ; First repo is the main repo, handle it differently
 		{
 			Run, "C:\Program Files\Git\git-bash.exe" "--cd=%projectDirectory%"
@@ -158,6 +159,7 @@ RunCommand:
 				RepoLocationList.=repoList[index][2] . " "
 			}
 		}
+		Process, Close, conhost.exe ; Remove any residual conhosts lying around in the RAM (~6MB!)
 		Run, "C:\Program Files\Git\git-bash.exe" "data\gitBashMagic.sh" "%projectDirectory%" "%Command%" "%RepoLocationList%" "%NeedLogin%" "%SoundEnabled%"
 	}
 Return

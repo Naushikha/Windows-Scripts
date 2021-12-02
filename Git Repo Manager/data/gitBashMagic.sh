@@ -54,6 +54,9 @@ done
 [ $SOUND_ENABLED -eq 1 ] && powershell -c "(New-Object Media.SoundPlayer 'C:\Windows\Media\tada.wav').PlaySync()" &
 echo 
 echo ==================================================
+# Kill the ssh-agent process (I've observed that these continue to remain as residual processes in the system for some reason)
+# https://gist.github.com/versedi/a378513271ad01e4b7f3
+[ $REQUIRE_LOGIN -eq 1 ] && echo "(*) Killing SSH agent..." && taskkill -F //IM ssh-agent.exe //T
 echo "${YELLOW}(!) All done! ${NC}"
 echo "(*) Worked on $(echo -n "$REPO_LIST" | wc -w) repository/s."
 echo

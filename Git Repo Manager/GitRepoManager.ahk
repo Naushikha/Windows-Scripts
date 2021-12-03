@@ -47,6 +47,7 @@ Gui, Add, Checkbox, y+15 x+-100 vNeedLogin, Require SSH login
 
 Hotkey, ^Backspace, FixCtrlBackspace
 
+Gui, +AlwaysOnTop
 Gui, Show,, Git Repository Manager
 Return
 

@@ -45,6 +45,8 @@ Gui, Add, ComboBox, xp+5 yp+15 w100 vSelection gGetSelection, %savedSelections%
 Gui, Add, Button, gSelectDelete, ` ` Delete Selection` ` 
 Gui, Add, Checkbox, y+15 x+-100 vNeedLogin, Require SSH login
 
+Hotkey, ^Backspace, FixCtrlBackspace
+
 Gui, Show,, Git Repository Manager
 Return
 
@@ -225,3 +227,8 @@ MakeLong(LoWord, HiWord) {
 MakeShort(Long, ByRef LoWord, ByRef HiWord) {
 	LoWord := Long & 0xffff, HiWord := Long >> 16
 }
+
+; Ctrl+Backspace fix
+FixCtrlBackspace:
+    Send ^+{Left}{Backspace}
+Return

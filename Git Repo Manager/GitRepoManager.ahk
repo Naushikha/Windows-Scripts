@@ -38,11 +38,12 @@ Gui, Add, ComboBox, w600 Choose1 vCommand gCbAutoComplete, %savedCommands%
 Gui, Font,
 Gui, Add, Text, ym, `nProject Location: `n`n%projectDirectory%`n
 Gui, Add, Button, default gRunCommand, `n` ` ` Run Command` ` ` `n`n
+Gui, Add, Checkbox, Checked vMaximized, Maximized
 Gui, Add, Checkbox, Checked vSoundEnabled, Enable SFX
-Gui, Add, Text, y+18, Saved Selections:
-Gui, Add, ComboBox, w100 vSelection gGetSelection, %savedSelections%
+Gui, Add, GroupBox, w110 h70, Saved Selections
+Gui, Add, ComboBox, xp+5 yp+15 w100 vSelection gGetSelection, %savedSelections%
 Gui, Add, Button, gSelectDelete, ` ` Delete Selection` ` 
-Gui, Add, Checkbox, y+20 x+-100 vNeedLogin, Require SSH login
+Gui, Add, Checkbox, y+15 x+-100 vNeedLogin, Require SSH login
 
 Gui, Show,, Git Repository Manager
 Return
@@ -161,6 +162,11 @@ RunCommand:
 		}
 		Process, Close, conhost.exe ; Remove any residual conhosts lying around in the RAM (~6MB!)
 		Run, "C:\Program Files\Git\git-bash.exe" "data\gitBashMagic.sh" "%projectDirectory%" "%Command%" "%RepoLocationList%" "%NeedLogin%" "%SoundEnabled%"
+		if (Maximized == true)
+		{
+			WinWait, Git Repo Manager: Bash Instance
+			WinMaximize ; Use the window found by WinWait.
+		}
 	}
 Return
 

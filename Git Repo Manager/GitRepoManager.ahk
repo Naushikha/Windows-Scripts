@@ -36,18 +36,18 @@ Gui, Add, Text, y+5 x+-180, Command:
 Gui, Font, bold s11, Arial
 Gui, Add, ComboBox, w600 Choose1 vCommand gCbAutoComplete, %savedCommands%
 Gui, Font,
-Gui, Add, Text, ym, `nProject Location: `n`n%projectDirectory%`n
-Gui, Add, Button, default gRunCommand, `n` ` ` Run Command` ` ` `n`n
+Gui, Add, Text, ym, `nProject Location:
+Gui, Add, Text, y+5, %projectDirectory%
+Gui, Add, Button, default gRunCommand y+10, `n` ` ` Run Command` ` ` `n`n
 Gui, Add, Checkbox, Checked vMaximized, Maximized
 Gui, Add, Checkbox, Checked vSoundEnabled, Enable SFX
-Gui, Add, GroupBox, w110 h70, Saved Selections
+Gui, Add, GroupBox, w110 h70 y+15, Saved Selections
 Gui, Add, ComboBox, xp+5 yp+15 w100 vSelection gGetSelection, %savedSelections%
 Gui, Add, Button, gSelectDelete, ` ` Delete Selection` ` 
-Gui, Add, Checkbox, y+15 x+-100 vNeedLogin, Require SSH login
+Gui, Add, Checkbox, y+25 x+-100 vNeedLogin, Require SSH login
 
 Hotkey, ^Backspace, FixCtrlBackspace
 
-Gui, +AlwaysOnTop
 Gui, Show,, Git Repository Manager
 Return
 

@@ -4,6 +4,10 @@ TaskBar Stats - Open source alternative for XMeters - https://github.com/openhoa
 TrafficMonitor - 
 https://github.com/zhongyang219/TrafficMonitor (There's an English readme)
 https://github.com/zhongyang219/TrafficMonitor/blob/master/README_en-us.md
+
+Launchy - https://github.com/OpenNingia/Launchy
+Everything - https://www.voidtools.com/
+
 BitMeter OS - Log network usage - https://codebox.net/pages/bitmeteros
 
 AutoHotKey - Script and automate Windows - https://www.autohotkey.com/

@@ -7,5 +7,6 @@ git checkout somebranch
 git checkout -b newbranch
 git pull . develop
 git restore . ; git clean -fd ; git status
+(sourcetree -f "$PWD") &>/dev/null
 gitk &
 git --no-pager log --all --pretty=format:'%C(auto)%h %C(cyan) %s %Creset %n %>(16) %as / %ar, %aN %n' --graph -n 4

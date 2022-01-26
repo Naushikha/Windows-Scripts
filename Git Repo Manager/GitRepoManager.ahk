@@ -47,6 +47,7 @@ Gui, Add, Button, gSelectDelete, ` ` Delete Selection` `
 Gui, Add, Checkbox, y+25 x+-100 vNeedLogin, Require SSH login
 
 Hotkey, ^Backspace, FixCtrlBackspace
+Hotkey, ^+C, CleanUpRAM
 
 Gui, Show,, Git Repository Manager
 Return
@@ -232,4 +233,9 @@ MakeShort(Long, ByRef LoWord, ByRef HiWord) {
 ; Ctrl+Backspace fix
 FixCtrlBackspace:
     Send ^+{Left}{Backspace}
+Return
+
+; Clean up RAM
+CleanUpRAM:
+    Run, "data\cleanUpRAM.bat"
 Return

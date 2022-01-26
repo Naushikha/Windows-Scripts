@@ -33,3 +33,5 @@ Varjo OpenXR,Plugins\VarjoOpenXR
 Munitions,Plugins\Munitions
 DecaMove SDK,Plugins\DecaMoveSDK
 HTN,Plugins\HTN
+Thermal Modes,Plugins\ThermalModes
+Pixel Streaming,Plugins\PixelStreaming

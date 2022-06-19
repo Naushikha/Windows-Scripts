@@ -1,0 +1,61 @@
+.
+├── ASSISTIVE TOOLS
+│   ├── BCUninstaller
+│   ├── ClickMonitorDDC
+│   ├── RapidTyping
+│   └── SumatraPDF
+├── &BROWSER
+│   ├── browser.exe
+│   ├── DATA
+│   ├── focus.vbs
+│   └── rufus_files
+├── COMPRESSION TOOLS
+│   └── WinRAR
+├── HACKING TOOLS
+│   └── produKey
+├── LANGUAGE TOOLS
+│   ├── codeblocks-17.12mingw-nosetup
+│   ├── Dev-C++
+│   ├── dnSpy
+│   ├── Git
+│   ├── HeidiSQL
+│   ├── HxD
+│   ├── jPortable
+│   ├── Python 3.7
+│   ├── Resource Hacker
+│   ├── VSCode
+│   └── WinPython 3.7
+├── MUSIC TOOLS
+│   ├── Deezerloader Remix
+│   ├── foobar2000
+│   ├── MediaMonkey
+│   ├── Mobile Media Converter
+│   ├── Mp3tag
+│   ├── mp3val
+│   └── Spek
+├── NETWORK TOOLS
+│   ├── Advanced IP Scanner
+│   ├── Advanced Port Scanner
+│   ├── TeamViewer
+│   ├── Telegram
+│   ├── Tor Browser
+│   ├── UniServerZ
+│   ├── WinSCP
+│   └── XLight
+├── OS TOOLS
+│   ├── Benchmarking
+│   ├── Block DeviceTesting
+│   ├── Bootable Media Creation
+│   ├── WinCDEmu
+│   └── WinDirStat
+├── SECURITY TOOLS
+│   └── Stinger
+├── tools
+├── VIDEO TOOLS
+│   └── VideoPad Pro 7.32
+└── VIRTUALIZATION TOOLS
+    ├── ePSXe
+    ├── KEmulator
+    └── Portable-VirtualBox
+
+55 directories, 3 files

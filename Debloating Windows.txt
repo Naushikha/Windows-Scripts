@@ -1,0 +1,12 @@
+Customize alot of the hidden options in Windows (can disable updates, defender etc.):
+https://winaerotweaker.com/
+
+Remove bloatware in Windows 11:
+https://www.youtube.com/watch?v=8ReoMuCUdKE
+https://github.com/builtbybel/ThisIsWin11
+
+Remove bloatware in Windows 10:
+https://github.com/builtbybel/bloatbox
+
+Use ShutUpWindows:
+https://www.oo-software.com/en/shutup10
